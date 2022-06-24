@@ -18,7 +18,7 @@ int main()
 {
 	for (int  i = 0; i < numBooks; i++)//перебирая строки
 	{
-		string my_str = bookData[i]; //grab one row of bookData each cycle and pu it in 'my_str'
+		string my_str = bookData[i]; //grab one row of bookData each cycle and put it in 'my_str' string
 
 		vector<string> result; //vector holding strings to split things up
 
