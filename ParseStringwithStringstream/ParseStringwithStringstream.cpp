@@ -16,7 +16,7 @@ const string bookData[] =//массив типа string
 
 int main()
 {
-	for (int  i = 0; i < numBooks; i++)//перебирая строки
+	for (int  i = 0; i < numBooks; i++)//перебирая строки в строковом массиве
 	{
 		string my_str = bookData[i]; //grab one row of bookData each cycle and put it in 'my_str' string
 
@@ -24,16 +24,19 @@ int main()
 
 		stringstream s_stream(my_str);//create string stream 's_stream' from the string 'my_str' 
 
-		while (s_stream.good()) {
+
+		while (s_stream.good()) {//пока строка с которой работаем в цикле не закончится
+
 
 			string substr;//temporary variable
 
 			getline(s_stream, substr, ','); //get first string delimited by comma and put it in substr 
 			result.push_back(substr); //put each substring in the vector at the BACK
+
 		}
 		for (int j = 0; j < result.size(); j++) 
 		{	//print all splitted strings
-			cout << result.at(j) << endl;//result это строковый вектор
+			cout << result.at(j) << endl;//result это строковый вектор - вывод отдельных элементов вектора с переходом на новую строку
 		}
 		cout << endl;
 	}
