@@ -32,7 +32,8 @@ int main()
 
 			getline(s_stream, substr, ','); //get first string delimited by comma and put it in substr 
 			result.push_back(substr); //put each substring in the vector at the BACK
-
+			//размер вектора увеличивается автоматически
+			result.insert(result.begin(), substr); //вставка подстрок в вектор в обратном порядке 
 		}
 		for (int j = 0; j < result.size(); j++) 
 		{	//print all splitted strings
